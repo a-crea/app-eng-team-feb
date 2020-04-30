@@ -1,0 +1,28 @@
+{
+    "patient":{
+        "id":int,
+        "name": string,
+        "birthDate":date,
+        "phone":string,
+        "email":string,
+        "address":string,
+        "ssn":string
+    },
+    "treatment":{
+        "id":int,
+        "name":string,
+        "duration":float,
+        "price":float
+    },
+    "appointment":{
+        "id":int,
+        "id_patient":int,
+        "id_treatment":int,
+        "date":date
+    },
+    "invoice":{
+        "id":int,
+        "id_appointment":int,
+        "date":date
+    }
+}

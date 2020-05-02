@@ -18,11 +18,11 @@
         "id":int,
         "id_patient":int,
         "id_treatment":int,
+	"time_slot":string,
         "date":date
     },
     "invoice":{
         "id":int,
-        "id_appointment":int,
         "date":date
     }
 }

@@ -21,8 +21,15 @@
 	"time_slot":string,
         "date":date
     },
+    "invoice_treatment": {
+	"id":int,
+	"id_invoice":int,
+	"id_treatment":int,
+	"quantity":int
+    },
     "invoice":{
         "id":int,
-        "date":date
+	"id_patient":int,
+	"date":date
     }
 }

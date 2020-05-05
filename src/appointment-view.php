@@ -9,7 +9,8 @@
 
 <body>
     <?php
-        include (dirname(__FILE__).'/components/navabar.php');
+        $active='appointments';
+        include (dirname(__FILE__).'/components/navbar.php');
     ?>
     <div class="container mt-4">
         <form action="">

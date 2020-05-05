@@ -8,9 +8,3 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-<script>
-    document.ready(()=>{
-        var filename = url.substring(url.lastIndexOf('/')+1);
-        console.log(filename);
-    })
-</script>

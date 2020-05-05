@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Treatments">
+  <meta name="description" content="PatientList">
   <meta name="author" content="Team Febbraio">
   <title>Patient</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -17,41 +17,47 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Appointments</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#"><span class="sr-only">(current)</span>Patients</a>
-          </li>
-        </ul>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="appointments.html"><span class="sr-only">(current)</span>Appointments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="patients.html">Patients</a>
+              </li>
+            </ul>
       </div>
     </nav>
     <div class="container mt-4">
       <div class="table-responsive">
         <div class="col-12">
-        <h1>TREATMENTS LIST <button class="btn btn-success" type="submit">ADD</button></h1>
+        <h1>PATIENT LIST <button class="btn btn-success" type="submit">ADD</button></h1>
         </div>
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">Treatment ID</th>
+                <th scope="col">Patient ID</th>
                 <th scope="col">Name</th>
-                <th scope="col">Duration</th>
-                <th scope="col">Price</th>
+                <th scope="col">Birthdate</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">SSN</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">TR12345</th>
-                <td>Teeth Bleaching</td>
-                <td>30min</td>
-                <td>100€</td>
-                <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+                <th scope="row">AV123456</th>
+                <td>Mark Otto</td>
+                <td>30/02/1990</td>
+                <td>3472149200</td>
+                <td>markotto@unibz.it</td>
+                <td>Piazza Walter 1, BZ</td>
+                <td>654321</td>
+                <td><a href="patient-view.html">Edit</a> | <a href="#">Delete</a></td>
               </tr>
             </tbody>
         </table>

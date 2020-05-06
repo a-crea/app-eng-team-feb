@@ -2,6 +2,11 @@
 <html lang="en">
 
 <head>
+    <script>
+        function addAppointment() {
+            window.location= "http:///app-eng-team-feb/src/add-appointment.php";
+        }
+    </script>
     <?php
         include (dirname(__FILE__).'/components/head.php');
     ?>

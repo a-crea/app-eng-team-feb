@@ -16,22 +16,32 @@
     <div class="col-12">
         <h1>ADD A NEW APPOINTMENT</h1>
         <form>
-            <table>
-                <tr>
-                <td><label>PATIENT:</label></td>
-                <td><input type="name" name="name" placeholder="Vera Rossi"></td></tr>
-                <tr>
-                <td><label>TREATMENT:</label></td>
-                <td><select id="select-treatments" name ="select-treatments">
+        <div class="form-group">
+                <label for="patient">
+                    PATIENT:
+                </label>
+                <input type="text" name="patient" class="form-control" placeholder="Vera Rossi">
+            </div>
+            <div class="form-group">
+                <label for="treatment">
+                    TREATMENT:
+                </label>
+                <select id="select-treatments" name ="select-treatments" class="form-control">
                   <option id="teeth-whitening" value="teeth-whitening">Teeth whitening</option>
                   <option id="weekly-control" value="weekly-control">Weekly control</option>
-                </select></td></tr>
-                <tr>
-                <td><label>DATE:</label></td>
-                <td><input type="date" name="date"></td></tr>
-                <tr>
-                <td><label>TIME SLOT:</label></td>
-                <td><select id="time-slot" name="time-slot">
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">
+                    DATE:
+                </label>
+                <input type="date" name="date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="time-slot">
+                    TIME SLOT:
+                </label>
+                <select id="time-slot" name="time-slot" class="form-control">
                   <option value="8">8:00 - 9:00</option>
                   <option value="9">9:00 - 10:00</option>
                   <option value="10">10:00 - 11:00</option>
@@ -41,9 +51,7 @@
                   <option value="16">16:00 - 17:00</option>
                   <option value="17">17:00 - 18:00</option>
                   </select>
-                </td>
-                </tr>
-            </table>
+            </div>
             <button type="button" class="btn btn-success">ADD</button>
         </form>
     </div>

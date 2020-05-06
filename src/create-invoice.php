@@ -16,20 +16,28 @@
     <div class="col-12">
         <h1>CREATE INVOICE</h1>
         <form>
-            <table>
-                <tr>
-                <td><label>PATIENT:</label></td>
-                <td><input type="name" name="name" placeholder="Vera Rossi"></td></tr>
-                <tr>
-                <td><label>TREATMENT:</label></td>
-                <td><select id="select-treatments" name ="select-treatments">
+        <div class="form-group">
+                <label for="patient">
+                    PATIENT:
+                </label>
+                <input type="text" name="patient" class="form-control" placeholder="Vera Rossi">
+            </div>
+            <div class="form-group">
+                <label for="treatment">
+                    TREATMENT:
+                </label>
+                <select id="select-treatments" name ="select-treatments" class="form-control">
                   <option id="teeth-whitening" value="teeth-whitening">Teeth whitening</option>
                   <option id="weekly-control" value="weekly-control">Weekly control</option>
-                </select></td></tr>
-                <tr>
-                <td><label>DATE OF EMISSION:</label></td>
-                <td><input type="date" name="date"></td></tr>
-            </table>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">
+                    DATE OF EMISSION:
+                </label>
+                <input type="date" name="date" class="form-control">
+            </div>
+           
             <button type="button" class="btn btn-success">PREVIEW</button>
         </form>
     </div>

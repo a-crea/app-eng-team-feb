@@ -18,18 +18,18 @@
         "id":int,
         "id_patient":int,
         "id_treatment":int,
-	"time_slot":string,
+	    "time_slot":string,
         "date":date
     },
     "invoice_treatment": {
-	"id":int,
-	"id_invoice":int,
-	"id_treatment":int,
-	"quantity":int
+        "id":int,
+        "id_invoice":int,
+        "id_treatment":int,
+        "quantity":int
     },
     "invoice":{
         "id":int,
-	"id_patient":int,
-	"date":date
+        "id_patient":int,
+        "date":date
     }
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <?php
-      include (dirname(__FILE__).'/components/head.php');
+      include './components/head.php');
   ?>
   <title>TITLE</title>
 </head> 

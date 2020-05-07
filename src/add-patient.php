@@ -14,25 +14,31 @@
     ?>
     <h1>ADD A NEW PATIENT</h1>
 
-    <form action="/php/add-patient.php" method="POST">
+    <form action="api/add-patient.php" method="POST">
         <table>
             <tr>
-            <td><label>NAME:</label></td>
-            <td><input type="name" name="name" placeholder="Anita"></td>
-            <td><label>SURNAME:</label></td>
-            <td><input type="surname" name="surname" placeholder="Rossi"></td>
+            <td><label>NAME and SURNAME:</label></td>
+            <td><input type="text" name="name" placeholder="Anita"></td>
             </tr>
             <tr>
             <td><label>DATE OF BIRTH:</label></td>
-            <td><input type="date" name="birthDate"></td>
-            <td><label>Gender:</label></td>
-            <td><label for="male">Male</label> <input type="radio" name="gender" id="male" value="male">
-            <label for="female">Female</label> <input type="radio" name="gender" id="female" value="female">
-            <label for="other">Other</label> <input type="radio" name="gender" id="other" value="other" checked>
-            </td>
+            <td><input type="date" name="birthdate"></td>
             </tr>
+             <tr>
+            <td><label>Phone</label></td>
+            <td><input type="text" name="phone"></td>
+            </tr>
+            <tr>
             <td><label>EMAIL:</label></td>
             <td><input type="email" name="email" placeholder="anitarossi@gmail.com"></td>
+            </tr>
+            <tr>
+            <td><label>Address</label></td>
+            <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+            <td><label>SSN</label></td>
+            <td><input type="text" name="ssn"></td>
             </tr>
         </table>
         <p>

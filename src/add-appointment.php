@@ -4,7 +4,7 @@
   <?php
       include (dirname(__FILE__).'/components/head.php');
   ?>
-  <title>TITLE</title>
+  <title>Add Appointment</title>
 </head> 
 <body>
     <?php

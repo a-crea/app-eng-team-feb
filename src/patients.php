@@ -4,7 +4,7 @@
   <?php
       include (dirname(__FILE__).'/components/head.php');
   ?>
-  <title>Patient</title>
+  <title>Patients</title>
 </head> 
 <body>
     <?php
@@ -38,7 +38,7 @@
                 <td>markotto@unibz.it</td>
                 <td>Piazza Walter 1, BZ</td>
                 <td>654321</td>
-                <td><a href="patient-view.php">Edit</a> | <a href="#">Delete</a></td>
+                <td><a href="edit-patient.php">Edit</a> | <a href="#">Delete</a></td>
               </tr>
             </tbody>
         </table>
@@ -52,7 +52,9 @@
         .then(function(response) {
             return response.text();
         }).then(function(data) {
-            updateTable(JSON.parse(data));
+            if(data!='null'){
+              updateTable(JSON.parse(data));
+            }
         }).catch(function(err) {
             console.log ('ERRORE ', err);
         })

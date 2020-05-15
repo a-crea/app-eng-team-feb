@@ -6,21 +6,15 @@
     $toJSON = [];
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-        $id = $row["id"];
-        $name = $row["name"];
-        $birthdate = $row["birthdate"];
-        $phone = $row["phone"];
-        $email = $row["email"];
-        $address = $row["address"];
-        $ssn = $row["ssn"];
-        $pushThis = ["id"=>$id,"name"=>$name,"birthdate"=>$birthdate,"phone"=>$phone,"email"=>$email,"address"=>$address,"ssn"=>$ssn];
-        $toJSON [] = $pushThis;
+            $id = $row["id"];
+            $name = $row["name"];
+            $birthdate = $row["birthdate"];
+            $phone = $row["phone"];
+            $email = $row["email"];
+            $address = $row["address"];
+            $ssn = $row["ssn"];
         }
-    } else {
-        $toJSON = false;
     }
-    header("Location: ../patient-view.php?id=".$id."&name=".$name."&birthdate=".$birthdate."&phone=".$phone."&email=".$email."&address=".$address."&ssn=".$ssn); 
+    header("Location: ../edit-patient.php?id=".$id."&name=".$name."&birthdate=".$birthdate."&phone=".$phone."&email=".$email."&address=".$address."&ssn=".$ssn); 
     $conn->close();
-
-    //TO INSERT IN DB
 ?>

@@ -4,7 +4,7 @@
   <?php
       include (dirname(__FILE__).'/components/head.php');
   ?>
-  <title>Add Appointment</title>
+  <title>Edit Appointment</title>
 </head> 
 <body>
     <?php
@@ -14,20 +14,21 @@
 <div class="container mt-4">
   <div class="table-responsive">
     <div class="col-12">
-        <h1>ADD A NEW APPOINTMENT</h1>
-        <form action="api/add-appointment.php" method="POST">
+        <h1>EDIT APPOINTMENT</h1>
+        <form action="api/edit-appointment.php" method="POST">
+        <input type="hidden" id="idAppointment" name="idAppointment">
             <div class="form-group">
-                <label for="select-patient">
+                <label for="selectPatient">
                     PATIENT:
                 </label>
-                 <select id="select-patient" name="patient" class="selectpicker form-control" data-live-search="true" required>
+                 <select id="selectPatient" name="patient" class="selectpicker form-control" data-live-search="true" required>
                 </select>
             </div>
             <div class="form-group">
-                <label for="select-treatment">
+                <label for="selectTreatment">
                     TREATMENT:
                 </label>
-                <select id="select-treatment" name ="treatment" class="selectpicker form-control" data-live-search="true" required>
+                <select id="selectTreatment" name ="treatment" class="selectpicker form-control" data-live-search="true" required>
                 </select>
             </div>
             <div class="form-group">
@@ -37,10 +38,10 @@
                 <input id="date" type="date" name="date" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="time-slot">
+                <label for="timeSlot">
                     TIME SLOT:
                 </label>
-                <select id="time-slot" name="timeSlot" class="selectpicker form-control" data-live-search="true" required>
+                <select id="timeSlot" name="time-slot" class="selectpicker form-control" data-live-search="true" required>
                   <option value="8-9">8:00 - 9:00</option>
                   <option value="9-10">9:00 - 10:00</option>
                   <option value="10-11">10:00 - 11:00</option>
@@ -51,7 +52,7 @@
                   <option value="17-18">17:00 - 18:00</option>
                   </select>
             </div>
-            <button type="submit" class="btn btn-success">ADD</button>
+            <button type="submit" class="btn btn-success">SAVE</button>
         </form>
     </div>
   </div>
@@ -88,6 +89,7 @@
             }).then(function(data) {
                 if(data!='null'){
                     addTreatments(JSON.parse(data));
+                    setData();
                 }
             }).catch(function(err) {
                 console.log ('ERRORE ', err);
@@ -101,7 +103,7 @@
               option += patient.name + '</option>';
               select += option;
           });
-          document.getElementById("select-patient").innerHTML=select;
+          document.getElementById("selectPatient").innerHTML=select;
           $('.selectpicker').selectpicker('refresh');
         }
         function addTreatments(data){
@@ -112,9 +114,19 @@
               option += treatment.name + '</option>';
               select += option;
           });
-          document.getElementById("select-treatment").innerHTML=select;
+          document.getElementById("selectTreatment").innerHTML=select;
           $('.selectpicker').selectpicker('refresh');
           $('.selectpicker').selectpicker('refresh');
+        }
+        function setData(){
+            let url = window.location.href;
+            let params = url.slice(url.lastIndexOf('?'),url.length);
+            let searchParams = new URLSearchParams(params);
+            searchParams.forEach(function(value, key) {
+                $("#"+key).val(value);
+            });
+          $('.selectpicker').selectpicker('refresh');
+          $('.selectpicker').selectpicker('render');
         }
     </script>
   </body>

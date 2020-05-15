@@ -8,7 +8,7 @@
 </head> 
 <body>
         <?php
-        $active='patients';
+        $active='treatments';
         include (dirname(__FILE__).'/components/navbar.php');
     ?>
     <div class="container mt-4">

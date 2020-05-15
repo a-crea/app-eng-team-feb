@@ -6,14 +6,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item" id="index-link">
-                <a class="nav-link <?php if($active=='index'){echo 'active';}?>" href="index.php">Home</a>
-            </li>
             <li class="nav-item" id="appointments-link">
-                <a class="nav-link <?php if($active=='appointments'){echo 'active';}?>" href="appointments.php">Appointments</a>
+                <a class="nav-link <?php if($active=='appointments'){echo 'active';}?>" href="index.php">Appointments</a>
             </li>
             <li class="nav-item" id="patients-link">
                 <a class="nav-link <?php if($active=='patients'){echo 'active';}?>" href="patients.php">Patients</a>
+            </li>
+            <li class="nav-item" id="treatments-link">
+                <a class="nav-link <?php if($active=='treatments'){echo 'active';}?>" href="treatments.php">Treatments</a>
             </li>
         </ul>
     </div>

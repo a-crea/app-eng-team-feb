@@ -61,6 +61,7 @@
         include (dirname(__FILE__).'/components/footer.php');
     ?>
     <script type="text/javascript">
+        var checkData = false;
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1; //January is 0!
@@ -78,7 +79,7 @@
                 return response.text();
             }).then(function(data) {
                 if(data!='null'){
-                    addPatients(JSON.parse(data));
+                    addPatients(JSON.parse(data));     
                 }
             }).catch(function(err) {
                 console.log ('ERRORE ', err);
@@ -89,7 +90,6 @@
             }).then(function(data) {
                 if(data!='null'){
                     addTreatments(JSON.parse(data));
-                    setData();
                 }
             }).catch(function(err) {
                 console.log ('ERRORE ', err);
@@ -104,9 +104,10 @@
               select += option;
           });
           document.getElementById("selectPatient").innerHTML=select;
-          $('.selectpicker').selectpicker('refresh');
+          setTimeout(setData(),200);
         }
         function addTreatments(data){
+          checkData = true;
           let option = '';
           let select = '';
           data.forEach(treatment => {       
@@ -115,18 +116,19 @@
               select += option;
           });
           document.getElementById("selectTreatment").innerHTML=select;
-          $('.selectpicker').selectpicker('refresh');
-          $('.selectpicker').selectpicker('refresh');
+          setTimeout(setData(),200);
         }
         function setData(){
-            let url = window.location.href;
-            let params = url.slice(url.lastIndexOf('?'),url.length);
-            let searchParams = new URLSearchParams(params);
-            searchParams.forEach(function(value, key) {
-                $("#"+key).val(value);
-            });
-          $('.selectpicker').selectpicker('refresh');
-          $('.selectpicker').selectpicker('render');
+            if(checkData==true){
+                let url = window.location.href;
+                let params = url.slice(url.lastIndexOf('?'),url.length);
+                let searchParams = new URLSearchParams(params);
+                searchParams.forEach(function(value, key) {
+                    $("#"+key).val(value);
+                });
+                $('.selectpicker').selectpicker('refresh');
+                $('.selectpicker').selectpicker('render');
+            }
         }
     </script>
   </body>

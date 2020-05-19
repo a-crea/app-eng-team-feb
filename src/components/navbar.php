@@ -15,6 +15,9 @@
             <li class="nav-item" id="treatments-link">
                 <a class="nav-link <?php if($active=='treatments'){echo 'active';}?>" href="treatments.php">Treatments</a>
             </li>
+            <li class="nav-item" id="treatments-link">
+                <a class="nav-link <?php if($active=='invoices'){echo 'active';}?>" href="invoices.php">Invoices</a>
+            </li>
         </ul>
     </div>
 </nav>

@@ -7,7 +7,7 @@
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             $selectPatient = $row["id_patient"];
-            $selectTreatment = $row["id_patient"];
+            $selectTreatment = $row["id_treatment"];
             $timeSlot = $row["time_slot"];
             $date = $row["date"];
         }
